@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - car
   - 
   - 
   - 
@@ -40,4 +40,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: fondo
+    uniqueID: 197511159
+    locked: 0
+  - name: vehuculo
+    uniqueID: 966009189
+    locked: 0
+  - name: plano
+    uniqueID: 571379777
     locked: 0
