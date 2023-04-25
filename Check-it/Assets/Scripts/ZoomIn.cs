@@ -22,16 +22,6 @@ public class ZoomIn : MonoBehaviour
         // Enable the tire camera
         tireCamera.enabled = true;
     }
-
-
-    public void OnBackButtonClicked()
-    {
-        Debug.Log("Back button clicked!");
     
-        // Disable the tire camera
-        tireCamera.enabled = false;
 
-        // Enable the main camera
-        mainCamera.enabled = true;
-    }
 }
