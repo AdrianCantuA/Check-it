@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class Wrench : MonoBehaviour
+public class Wrench2 : MonoBehaviour
 {
     public float hoverRange = 0.2f;
 
@@ -14,7 +14,7 @@ public class Wrench : MonoBehaviour
     void Start()
     {
         // Find all the nuts objects with the given tag and store their renderer
-        GameObject[] nutsArray = GameObject.FindGameObjectsWithTag("Nut");
+        GameObject[] nutsArray = GameObject.FindGameObjectsWithTag("Nut2");
         foreach (GameObject nut in nutsArray)
         {
             nutsObjects.Add(nut);
@@ -52,8 +52,8 @@ public class Wrench : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Add the entered object to the nutsObjects list if it has the tag "Nut"
-        if (other.gameObject.CompareTag("Nut"))
+        // Add the entered object to the nutsObjects list if it has the tag "Nut2"
+        if (other.gameObject.CompareTag("Nut2"))
         {
             nutsObjects.Add(other.gameObject);
             float distance = Vector2.Distance(transform.position, other.transform.position);
@@ -66,11 +66,12 @@ public class Wrench : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        // Remove the exited object from the nutsObjects list if it has the tag "Nut"
-        if (other.gameObject.CompareTag("Nut"))
+        // Remove the exited object from the nutsObjects list if it has the tag "Nut2"
+        if (other.gameObject.CompareTag("Nut2"))
         {
             nutsObjects.Remove(other.gameObject);
             isHovering = false;
         }
     }
 }
+
