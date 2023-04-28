@@ -6,11 +6,11 @@ using UnityEngine;
 public class Wrench : MonoBehaviour
 {
     public float hoverRange = 0.2f;
-
+    public bool canRemoveTire = false;
     private bool isHovering = false;
     private Renderer nutsRenderer;
     private List<GameObject> nutsObjects = new List<GameObject>();
-
+    
     void Start()
     {
         // Find all the nuts objects with the given tag and store their renderer
@@ -31,6 +31,7 @@ public class Wrench : MonoBehaviour
             {
                 Vector2 floorPosition = new Vector2(nutObject.transform.position.x - 2f, -3.7f); 
                 nutObject.transform.position = floorPosition;
+                canRemoveTire = true;
             }
         }
         
