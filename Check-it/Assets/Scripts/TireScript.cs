@@ -9,7 +9,7 @@ public class TireScript : MonoBehaviour
     public GameObject nuts;
     private Vector3 tireStartPosition;
     public Wrench wrench;
-    
+    public bool tireRemoved = false;
 
     private void Start()
     {
@@ -22,7 +22,8 @@ public class TireScript : MonoBehaviour
         if (wrench.canRemoveTire && Input.GetKeyDown(KeyCode.R))
         {
             // Move the tire to a new position
-            transform.position = new Vector3(10f, 0f, 0f);
+            transform.position = new Vector3(15f, 0f, 0f);
+            tireRemoved = true;
             
             // Reset the tire position flag
             //canRemoveTire = false;

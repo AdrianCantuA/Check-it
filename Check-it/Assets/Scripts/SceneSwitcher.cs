@@ -14,14 +14,7 @@ public class SceneSwitcher : MonoBehaviour
     public void carro(){
         SceneManager.LoadScene(1);
     }
-    public void llanta(){
+    public void motor(){
         SceneManager.LoadScene(2);
     }
-    public void gasolina(){
-        SceneManager.LoadScene(3);
-    }
-    public void ventana(){
-        SceneManager.LoadScene(4);
-    }
-    
 }
