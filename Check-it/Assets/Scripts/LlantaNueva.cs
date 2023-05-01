@@ -17,17 +17,15 @@ public class LlantaNueva : MonoBehaviour
 
     private void Update()
     {
-        if (PlayerPrefs.GetInt("LlantaArreglada", 0))
+        
+        if ((TireScript.tireRemoved && Input.GetKeyDown(KeyCode.T)) || PlayerPrefs.GetInt("LlantaArreglada", 0) >= 3)
         {
             transform.position = new Vector3(-4.25f, -2.78f, 0f);
             ponerTornillos = true;
-        }
-
-        else if (TireScript.tireRemoved && Input.GetKeyDown(KeyCode.T))
-        {
-            transform.position = new Vector3(-4.25f, -2.78f, 0f);
-            ponerTornillos = true;
-            
+            if (PlayerPrefs.GetInt("LlantaArreglada", 0) < 3)
+            {
+                PlayerPrefs.SetInt("LlantaArreglada", 3);
+            }
         }
     }
 }

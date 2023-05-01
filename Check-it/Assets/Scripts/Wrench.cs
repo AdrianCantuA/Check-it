@@ -18,17 +18,22 @@ public class Wrench : MonoBehaviour
 
     void Update()
     {
-        if (isHovering && LlantaNueva.ponerTornillos)
+        if ((isHovering && LlantaNueva.ponerTornillos) || PlayerPrefs.GetInt("LlantaArreglada", 0) >= 4)
         {
             Vector2 Recolocacion = new Vector2(-4.31f, -2.61f); 
             Nut.transform.position = Recolocacion;
-            PlayerPrefs.SetInt("LlantaArreglada", 1);
+            PlayerPrefs.SetInt("LlantaArreglada", 4);
         }
-        else if (isHovering)
+        else if (isHovering || PlayerPrefs.GetInt("LlantaArreglada", 0) >= 1)
         {
             Vector2 floorPosition = new Vector2(0f, -4f); 
             Nut.transform.position = floorPosition;
             canRemoveTire = true;
+            if(PlayerPrefs.GetInt("LlantaArreglada", 0) < 1)
+            {
+                PlayerPrefs.SetInt("LlantaArreglada", 1);
+            }
+
         }
                 
     }
