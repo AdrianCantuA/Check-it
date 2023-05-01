@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class SceneSwitcher : MonoBehaviour
 {
     public void siguiente(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(3);
+        PlayerPrefs.SetInt("LlantaArreglada", 0);
     }
     public void back(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
@@ -17,4 +18,8 @@ public class SceneSwitcher : MonoBehaviour
     public void motor(){
         SceneManager.LoadScene(2);
     }
+    public void tablero(){
+        SceneManager.LoadScene(3);
+    }
+   
 }
