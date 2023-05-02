@@ -5,73 +5,59 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Wrench : MonoBehaviour
 {
-    public float hoverRange = 0.2f;
     public bool canRemoveTire = false;
     private bool isHovering = false;
-    private Renderer nutsRenderer;
-    private List<GameObject> nutsObjects = new List<GameObject>();
-    
+    public GameObject Nut;
+    private Renderer nutRenderer;
+    public LlantaNueva LlantaNueva; 
+
     void Start()
     {
-        // Find all the nuts objects with the given tag and store their renderer
-        GameObject[] nutsArray = GameObject.FindGameObjectsWithTag("Nut");
-        foreach (GameObject nut in nutsArray)
-        {
-            nutsObjects.Add(nut);
-        }
-        nutsRenderer = nutsObjects[0].GetComponent<Renderer>();
+        nutRenderer = Nut.GetComponent<Renderer>();
     }
 
     void Update()
     {
-        if (isHovering)
+        if ((isHovering && LlantaNueva.ponerTornillos) || PlayerPrefs.GetInt("LlantaArreglada", 0) >= 4)
         {
-            // Make all the nuts objects appear on the floor if the wrench is hovering over them
-            foreach (GameObject nutObject in nutsObjects)
-            {
-                Vector2 floorPosition = new Vector2(nutObject.transform.position.x - 2f, -3.7f); 
-                nutObject.transform.position = floorPosition;
-                canRemoveTire = true;
-            }
+            Vector2 Recolocacion = new Vector2(-4.31f, -2.61f); 
+            Nut.transform.position = Recolocacion;
+            PlayerPrefs.SetInt("LlantaArreglada", 4);
         }
-        
+        else if (isHovering || PlayerPrefs.GetInt("LlantaArreglada", 0) >= 1)
+        {
+            Vector2 floorPosition = new Vector2(0f, -4f); 
+            Nut.transform.position = floorPosition;
+            canRemoveTire = true;
+            if(PlayerPrefs.GetInt("LlantaArreglada", 0) < 1)
+            {
+                PlayerPrefs.SetInt("LlantaArreglada", 1);
+            }
+
+        }
+                
     }
 
     void OnMouseDrag()
     {
-    
         // Get the position of the mouse in screen space
         Vector3 mousePos = Input.mousePosition;
 
         // Convert the mouse position to world space
         mousePos = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, transform.position.z - Camera.main.transform.position.z));
 
-        // Move the object to the mouse position
+        // Move the wrench object to the mouse position
         transform.position = mousePos;
+
     }
 
-
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D Nut)
     {
-        // Add the entered object to the nutsObjects list if it has the tag "Nut"
-        if (other.gameObject.CompareTag("Nut"))
-        {
-            nutsObjects.Add(other.gameObject);
-            float distance = Vector2.Distance(transform.position, other.transform.position);
-            if (distance <= hoverRange)
-            {
-                isHovering = true;
-            }
-        }
+        isHovering = true;
     }
 
-    void OnTriggerExit2D(Collider2D other)
+    void OnTriggerExit2D(Collider2D Nut)
     {
-        // Remove the exited object from the nutsObjects list if it has the tag "Nut"
-        if (other.gameObject.CompareTag("Nut"))
-        {
-            nutsObjects.Remove(other.gameObject);
-            isHovering = false;
-        }
+        isHovering = false;
     }
 }
