@@ -270,6 +270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 718018326}
   - component: {fileID: 718018325}
+  - component: {fileID: 718018327}
   m_Layer: 0
   m_Name: Limpiaparabrisas
   m_TagString: Untagged
@@ -344,6 +345,18 @@ Transform:
   m_Father: {fileID: 738128401}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &718018327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718018324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2264b3643073f1947a8dfa0ccd503186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &738128400
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,6 +945,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2029599094}
   - component: {fileID: 2029599095}
+  - component: {fileID: 2029599096}
   m_Layer: 0
   m_Name: aceite
   m_TagString: Untagged
@@ -1006,6 +1020,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2029599096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029599093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4594257c86000a5419c0958de09f843b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2109762878
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,6 +1042,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2109762879}
   - component: {fileID: 2109762880}
+  - component: {fileID: 2109762881}
   m_Layer: 0
   m_Name: Anticongelante
   m_TagString: Untagged
@@ -1090,3 +1117,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2109762881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109762878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd898849395f0f0488332dc547bf1d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
