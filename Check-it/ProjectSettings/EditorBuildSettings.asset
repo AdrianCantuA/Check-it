@@ -11,6 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NivelCarro.unity
     guid: c4c09698c49ea6c48bc3d475f0313879
+<<<<<<< HEAD
+=======
+  - enabled: 0
+    path: 
+    guid: 1bf965c5c9b4ea040b9ba613da75cc53
+  - enabled: 0
+    path: 
+    guid: 3ea7c26fddb2a48aea7fb737c18bd0cf
+>>>>>>> main
   - enabled: 1
     path: Assets/Scenes/motor.unity
     guid: ea2d1952a0c6d45788d74f48a91ce3d6
@@ -20,10 +29,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minijuego.unity
     guid: 768244335f7004a76bc7afc98e6da3c1
+<<<<<<< HEAD
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+=======
+>>>>>>> main
   m_configObjects: {}
