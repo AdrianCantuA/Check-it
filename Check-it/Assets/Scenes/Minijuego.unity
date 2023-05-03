@@ -673,6 +673,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4690493350176869129, guid: 6c5296f7bccc24e578529f73836fc5cd, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8679245
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690493350176869129, guid: 6c5296f7bccc24e578529f73836fc5cd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.44624418
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690493350176869129, guid: 6c5296f7bccc24e578529f73836fc5cd, type: 3}
+      propertyPath: m_Color.r
+      value: 0.38074043
+      objectReference: {fileID: 0}
     - target: {fileID: 4690493350176869134, guid: 6c5296f7bccc24e578529f73836fc5cd, type: 3}
       propertyPath: m_Name
       value: carros2_0
