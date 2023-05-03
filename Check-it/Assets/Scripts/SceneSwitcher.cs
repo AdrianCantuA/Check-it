@@ -25,5 +25,8 @@ public class SceneSwitcher : MonoBehaviour
     public void tablero(){
         SceneManager.LoadScene(3);
     }
+    public void ProbarCarro(){
+        SceneManager.LoadScene(4);
+    }
    
 }
