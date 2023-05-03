@@ -3,17 +3,20 @@ using System.Diagnostics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 public class Wrench : MonoBehaviour
 {
-    public bool canRemoveTire = false;
+   public bool canRemoveTire = false;
     private bool isHovering = false;
     public GameObject Nut;
-    private Renderer nutRenderer;
     public LlantaNueva LlantaNueva; 
+    public AudioClip wrenchSE; 
+    private AudioSource audioSource;
 
     void Start()
     {
-        nutRenderer = Nut.GetComponent<Renderer>();
+        //Get the AudioSource component attached to the game object
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -31,6 +34,8 @@ public class Wrench : MonoBehaviour
             canRemoveTire = true;
             if(PlayerPrefs.GetInt("LlantaArreglada", 0) < 1)
             {
+                // Play the "wrenchSE" sound
+                audioSource.PlayOneShot(wrenchSE);
                 PlayerPrefs.SetInt("LlantaArreglada", 1);
             }
 

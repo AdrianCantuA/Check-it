@@ -16,6 +16,9 @@ public class SceneSwitcher : MonoBehaviour
     public void back(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
+    public void inicio(){
+        SceneManager.LoadScene(0);
+    }
     public void carro(){
         SceneManager.LoadScene(1);
     }
