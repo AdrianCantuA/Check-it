@@ -4,8 +4,18 @@ using UnityEngine;
 
 public class MusicaDeFondo : MonoBehaviour
 {
-   void Awake()
-    {
-        DontDestroyOnLoad(transform.gameObject);
-    }
+static MusicaDeFondo instance;
+
+void Awake()
+{
+if (instance == null)
+{
+instance = this;
+DontDestroyOnLoad(gameObject);
+}
+else
+{
+Destroy(gameObject);
+}
+}
 }

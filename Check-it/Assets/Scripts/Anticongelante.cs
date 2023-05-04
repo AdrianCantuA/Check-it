@@ -21,10 +21,15 @@ public class Anticongelante : MonoBehaviour
     private Vector3 initialPosition;
     private Quaternion initialRotation;
 
+    public AudioClip oil; 
+    private AudioSource audioSource;
+
     void Start()
     {
         // Store the initial position of the object
         initialPosition = transform.position;
+        audioSource = GetComponent<AudioSource>();
+
     }
 
     void Update()
@@ -68,6 +73,7 @@ public class Anticongelante : MonoBehaviour
     IEnumerator WaitAndMoveBack(float waitTime)
     {
         // Wait for the specified time
+        audioSource.PlayOneShot(oil);
         yield return new WaitForSeconds(waitTime);
         // Move the object back to its initial position
         transform.position = initialPosition;
