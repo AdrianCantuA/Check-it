@@ -23,6 +23,7 @@ public class Anticongelante : MonoBehaviour
 
     public AudioClip oil; 
     private AudioSource audioSource;
+    private bool hasPlayed = false;
 
     void Start()
     {
@@ -72,8 +73,12 @@ public class Anticongelante : MonoBehaviour
 
     IEnumerator WaitAndMoveBack(float waitTime)
     {
+        if (!hasPlayed)
+        {
+            audioSource.PlayOneShot(oil);
+            hasPlayed = true;
+        }
         // Wait for the specified time
-        audioSource.PlayOneShot(oil);
         yield return new WaitForSeconds(waitTime);
         // Move the object back to its initial position
         transform.position = initialPosition;
