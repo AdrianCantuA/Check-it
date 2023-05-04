@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class Crash : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
+        
         Destroy(gameObject);
+    }
+    private void OnDestroy()
+    {
+        
+
     }
 }
