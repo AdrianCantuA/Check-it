@@ -54,7 +54,7 @@ public class Bugwash : MonoBehaviour
                 transform.rotation = targetRotation;
                 // Wait for the specified time
                 StartCoroutine(WaitAndMoveBack(moveTime));	
-                PlayerPrefs.SetInt("BugWashArreglado", 1);
+                PlayerPrefs.SetInt("AnticongelanteArreglado", 1);
             }
         }
     }
