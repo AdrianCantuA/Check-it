@@ -13,7 +13,7 @@ public class ApiScript1 : MonoBehaviour {
                 Debug.Log(request.error);
             } else {
                 string json = request.downloadHandler.text;
-                ParseJson(json);
+                //ParseJson(json);
             }
         }
     }

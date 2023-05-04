@@ -34,22 +34,30 @@ public class ApiScript : MonoBehaviour
     }
 
     IEnumerator SendUserData(string jsonData)
-    {
+    { 
+        Debug.Log(jsonData);
+       WWWForm form = new WWWForm();
+        form.AddField("time",32);
+        form.AddField("completed","true");
+        form.AddField("user",1);
+        form.AddField("game",1);
         // Crea la solicitud HTTP
-        UnityWebRequest www = UnityWebRequest.Post(url, jsonData);
+       using(UnityWebRequest www = UnityWebRequest.Post(url, form)){
+            //www.SetRequestHeader("Content-Type", "application/json");
 
-        // Espera la respuesta de la API
-        yield return www.SendWebRequest();
+            yield return www.SendWebRequest();
 
-        // Verifica si hubo algún error
-        if (www.result != UnityWebRequest.Result.Success)
-        {
-            Debug.Log(www.error);
+            // Verifica si hubo algún error
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                Debug.Log("Datos enviados correctamente a la API");
+            }   
         }
-        else
-        {
-            Debug.Log("Datos enviados correctamente a la API");
-        }
+        
     }
 }
 
