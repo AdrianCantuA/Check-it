@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Inicio.unity
+    guid: dd295d66c1baa47b8a8835185a584866
+  - enabled: 1
+    path: Assets/Scenes/LogIn.unity
+    guid: 58d27277457f0486e8cb494baea3a215
+  - enabled: 1
+    path: Assets/Scenes/Tablero.unity
+    guid: 4f6b322318bff4b1d97dd52f38968a82
+  - enabled: 1
+    path: Assets/Scenes/NivelCarro.unity
+    guid: c4c09698c49ea6c48bc3d475f0313879
+  - enabled: 1
+    path: Assets/Scenes/Motor.unity
+    guid: ea2d1952a0c6d45788d74f48a91ce3d6
+  - enabled: 1
+    path: Assets/Scenes/Minijuego.unity
+    guid: 768244335f7004a76bc7afc98e6da3c1
   m_configObjects: {}

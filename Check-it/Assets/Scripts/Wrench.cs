@@ -21,7 +21,14 @@ public class Wrench : MonoBehaviour
 
     void Update()
     {
-        if ((isHovering && LlantaNueva.ponerTornillos) || PlayerPrefs.GetInt("LlantaArreglada", 0) >= 4)
+        if (isHovering && LlantaNueva.ponerTornillos)
+        {
+            Vector2 Recolocacion = new Vector2(-4.31f, -2.61f); 
+            audioSource.PlayOneShot(wrenchSE);
+            Nut.transform.position = Recolocacion;
+            PlayerPrefs.SetInt("LlantaArreglada", 4);
+        }
+        else if (PlayerPrefs.GetInt("LlantaArreglada", 0) >= 4)
         {
             Vector2 Recolocacion = new Vector2(-4.31f, -2.61f); 
             Nut.transform.position = Recolocacion;

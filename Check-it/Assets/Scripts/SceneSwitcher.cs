@@ -6,12 +6,11 @@ using UnityEngine.SceneManagement;
 public class SceneSwitcher : MonoBehaviour
 {
     public void siguiente(){
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
         PlayerPrefs.SetInt("LlantaArreglada", 0);
         PlayerPrefs.SetInt("AceiteArreglado", 0);
         PlayerPrefs.SetInt("AnticongelanteArreglado", 0);
         PlayerPrefs.SetInt("BugWashArreglado", 0);
-
     }
     public void back(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
@@ -19,17 +18,20 @@ public class SceneSwitcher : MonoBehaviour
     public void inicio(){
         SceneManager.LoadScene(0);
     }
-    public void carro(){
+    public void login(){
         SceneManager.LoadScene(1);
     }
-    public void motor(){
+    public void tablero(){
         SceneManager.LoadScene(2);
     }
-    public void tablero(){
+    public void carro(){
         SceneManager.LoadScene(3);
+    }    
+    public void motor(){
+        SceneManager.LoadScene(4);
     }
     public void ProbarCarro(){
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
     }
    
 }
