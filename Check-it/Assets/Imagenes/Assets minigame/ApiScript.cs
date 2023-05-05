@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
-/*
+
 [System.Serializable]
 public class UserData
 {
     public string email;
-    public string game;
-    public string completed;
-    public string time;
+    public int game;
+    public bool completed;
+    public int time;
 
 }
 
@@ -17,17 +17,23 @@ public class ApiScript : MonoBehaviour
 {
     private string url = "http://presno2112.pythonanywhere.com/api/results/";
     private UserData userData;
+    private GameManager gameManager;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-        // Rellena los datos del usuario
-        userData = new UserData();
-        userData.email = "asdfghjkl@example.com";
-        userData.game = "1";
-        userData.completed = "true";
-        userData.time = "24.0";
+        gameManager = FindObjectOfType<GameManager>();
 
+        // Rellena los datos del usuario
+        Debug.Log(gameManager.timer); 
+        /*userData = new UserData();
+        userData.email = "asdfghjkl@example.com";
+        userData.game = PlayerPrefs.GetInt("PlayerPreference").ToString();
+        userData.completed = "true";
+        userData.time = gameManager.timer.ToString("F2");
+*/
         // Convierte el objeto a JSON y envía la solicitud HTTP
         string jsonData = JsonUtility.ToJson(userData);
         StartCoroutine(SendUserData(jsonData));
@@ -37,9 +43,9 @@ public class ApiScript : MonoBehaviour
     { 
         Debug.Log(jsonData);
        WWWForm form = new WWWForm();
-        form.AddField("time",32);
+        form.AddField("time",gameManager.timer.ToString("F2"));
         form.AddField("completed","true");
-        form.AddField("user",1);
+        form.AddField("user",PlayerPrefs.GetInt("PlayerPreference"));
         form.AddField("game",1);
         // Crea la solicitud HTTP
        using(UnityWebRequest www = UnityWebRequest.Post(url, form)){
@@ -61,4 +67,3 @@ public class ApiScript : MonoBehaviour
     }
 }
 
-*/

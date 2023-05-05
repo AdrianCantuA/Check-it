@@ -12,7 +12,7 @@ public class SceneSwitcher : MonoBehaviour
         PlayerPrefs.SetInt("AnticongelanteArreglado", 0);
         PlayerPrefs.SetInt("BugWashArreglado", 0);
         PlayerPrefs.SetInt("Instrucciones", 0);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
     public void back(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
