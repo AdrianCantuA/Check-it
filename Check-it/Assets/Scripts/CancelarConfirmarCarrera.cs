@@ -25,10 +25,7 @@ public class CancelarConfirmarCarrera : MonoBehaviour
     }
     private void Confirmar()
     {
-        Debug.Log(PlayerPrefs.GetInt("ArreglarLlanta", 0));
-        Debug.Log(PlayerPrefs.GetInt("ArreglarAceite", 0));
-        Debug.Log(PlayerPrefs.GetInt("ArreglarAnticongelante", 0));
-        Debug.Log(PlayerPrefs.GetInt("ArreglarBugWash", 0));
+    
         SceneManager.LoadScene(5);
     }
 }

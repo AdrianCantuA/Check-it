@@ -14,7 +14,6 @@ public class CarroNoListo : MonoBehaviour
         {
             noJala.SetActive(true);
 
-            // Start coroutine to wait 2 seconds and show other game object and button
         }
         else if (PlayerPrefs.GetInt("ArreglarLlanta", 0) == 4 && PlayerPrefs.GetInt("ArreglarAceite", 0) == 1 && PlayerPrefs.GetInt("ArreglarAnticongelante", 0) == 1 && PlayerPrefs.GetInt("ArreglarBugWash", 0) == 1)
         {
