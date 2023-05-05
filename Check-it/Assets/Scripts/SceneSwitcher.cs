@@ -5,9 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitcher : MonoBehaviour
 {
-    public void Start()
-    {
-    }
+    
     public void siguiente(){
         PlayerPrefs.SetInt("LlantaArreglada", 0);
         PlayerPrefs.SetInt("AceiteArreglado", 0);

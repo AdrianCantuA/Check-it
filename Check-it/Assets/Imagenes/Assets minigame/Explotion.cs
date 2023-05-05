@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class Explotion : MonoBehaviour
 {
@@ -9,11 +11,6 @@ public class Explotion : MonoBehaviour
     public GameObject otherGameObjectToShow;
     public Button buttonToShow;
     public AudioSource musicSource;
-
-    public void Stop()
-    {
-        musicSource.Stop();
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -30,9 +27,9 @@ public class Explotion : MonoBehaviour
             Destroy(gameObject);
 
             // Activa el nuevo objeto
+            musicSource.Stop();
             nuevoObjeto.SetActive(true);
-            otherGameObjectToShow.SetActive(true);
-            buttonToShow.gameObject.SetActive(true);
+            SceneManager.LoadScene(6);
             
         }
     }
