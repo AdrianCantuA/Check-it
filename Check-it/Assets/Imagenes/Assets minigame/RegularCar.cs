@@ -12,4 +12,11 @@ public class RegularCar : MonoBehaviour
     {
         rb2d.velocity = new Vector2(0, carVelocity);
     }
+    void Update()
+    {
+     if (transform.position.y < -6f)
+        {
+            Destroy(gameObject);
+        }
+}
 }

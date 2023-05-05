@@ -17,6 +17,11 @@ public class Tiempo : MonoBehaviour
     private void Update()
     {
         // Update the timer text
+        if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex >= 5){
+            timerText.text = "Score: " + gameManager.score.ToString("F2");
+        }
+        else {
         timerText.text = "Timer: " + gameManager.timer.ToString("F2");
+        }
     }
 }
