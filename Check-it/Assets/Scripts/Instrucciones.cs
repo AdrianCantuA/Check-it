@@ -6,21 +6,18 @@ using UnityEngine.UI;
 public class Instrucciones : MonoBehaviour
 {
     public GameObject objectToDisable;
-    void Start()
-    {
-        if (PlayerPrefs.GetInt("Instrucciones", 0) == 1)
-        {
-            objectToDisable.SetActive(false);
-        }
-    }
+
     void Update()
     {
-        
-        if (Input.GetKeyDown(KeyCode.Escape) && PlayerPrefs.GetInt("Instrucciones", 0) == 0)
+        if ((PlayerPrefs.GetInt("Instrucciones", 0) == 0)){
+            objectToDisable.SetActive(true);
+         if (Input.GetKeyDown(KeyCode.Escape))
         {
             objectToDisable.SetActive(false);
             PlayerPrefs.SetInt("Instrucciones", 1);
         }
+        }
+       
     }
 }
 
