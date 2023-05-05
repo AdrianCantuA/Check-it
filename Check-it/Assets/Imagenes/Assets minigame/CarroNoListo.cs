@@ -13,6 +13,7 @@ public class CarroNoListo : MonoBehaviour
         if (PlayerPrefs.GetInt("LlantaArreglada", 0) < 4 || PlayerPrefs.GetInt("AceiteArreglado", 0) < 1 || PlayerPrefs.GetInt("AnticongelanteArreglado", 0) < 1 || PlayerPrefs.GetInt("BugWashArreglado", 0) < 1)
         {
             noJala.SetActive(true);
+            PlayerPrefs.SetInt("NoCompleto", 1);
 
         }
         else if (PlayerPrefs.GetInt("ArreglarLlanta", 0) == 4 && PlayerPrefs.GetInt("ArreglarAceite", 0) == 1 && PlayerPrefs.GetInt("ArreglarAnticongelante", 0) == 1 && PlayerPrefs.GetInt("ArreglarBugWash", 0) == 1)
