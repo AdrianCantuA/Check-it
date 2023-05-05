@@ -27,7 +27,7 @@ public class ApiScript : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
 
         // Rellena los datos del usuario
-        Debug.Log(gameManager.timer); 
+        //Debug.Log(gameManager.timer); 
         /*userData = new UserData();
         userData.email = "asdfghjkl@example.com";
         userData.game = PlayerPrefs.GetInt("PlayerPreference").ToString();
