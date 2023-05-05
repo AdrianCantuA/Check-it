@@ -6,38 +6,27 @@ using UnityEngine.UI;
 
 public class ConfirmarCarrera : MonoBehaviour
 {
-    public GameObject dialog;
-    public Button confirmButton;
-    public Button cancelButton;
+    public Button buttonToShow;
+    public Button buttonToHide1;
+    public Button buttonToHide2;
 
-    void Start()
+    private void Start()
     {
-        // Hide the dialog at start
-        dialog.SetActive(false);
+        // Hide the buttons at start
+        buttonToShow.gameObject.SetActive(true);
+        buttonToHide1.gameObject.SetActive(false);
+        buttonToHide2.gameObject.SetActive(false);
 
-        // Add a listener to the confirm button
-        confirmButton.onClick.AddListener(OnConfirmClicked);
-
-        // Add a listener to the cancel button
-        cancelButton.onClick.AddListener(OnCancelClicked);
+        // Add a listener to the button that will show the other buttons
+        buttonToShow.onClick.AddListener(ShowOtherButtons);
     }
 
-    void OnConfirmClicked()
+    private void ShowOtherButtons()
     {
-        // Start the game or perform the desired action
-        Debug.Log("Starting the game...");
-    }
-
-    void OnCancelClicked()
-    {
-        // Hide the dialog
-        dialog.SetActive(false);
-    }
-
-    public void ShowDialog()
-    {
-        // Show the dialog
-        dialog.SetActive(true);
+        // Show the buttons that were previously hidden
+        buttonToHide1.gameObject.SetActive(true);
+        buttonToHide2.gameObject.SetActive(true);
     }
 }
+
 

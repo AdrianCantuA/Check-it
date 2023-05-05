@@ -15,7 +15,7 @@ public class TapaAnticongelante : MonoBehaviour
     }
     private void OnMouseDown()
     {
-    if (PlayerPrefs.GetInt("BugWashArreglado", 0) == 1)
+    if (PlayerPrefs.GetInt("AnticongelanteArreglado", 0) == 1)
     {
         transform.position = initialPosition;
         BotonAnticongelante.SetActive(false);

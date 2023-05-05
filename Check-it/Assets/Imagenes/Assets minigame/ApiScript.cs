@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
-
+/*
 [System.Serializable]
 public class UserData
 {
@@ -61,3 +61,4 @@ public class ApiScript : MonoBehaviour
     }
 }
 
+*/
