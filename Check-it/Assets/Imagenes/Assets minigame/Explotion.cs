@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class Explotion : MonoBehaviour
 {
     public GameObject objetoDeReemplazo;
-    
-    void OnCollisionEnter2D(Collision2D collision)
+    public GameObject otherGameObjectToShow;
+    public Button buttonToShow;
+    public AudioSource musicSource;
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Obstaculo"))
         {
@@ -20,9 +26,13 @@ public class Explotion : MonoBehaviour
             // Destruye el objeto original
             Destroy(gameObject);
 
-            
             // Activa el nuevo objeto
+            musicSource.Stop();
             nuevoObjeto.SetActive(true);
+            SceneManager.LoadScene(6);
+            
         }
     }
+
 }
+
