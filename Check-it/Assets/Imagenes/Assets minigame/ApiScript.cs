@@ -25,23 +25,11 @@ public class ApiScript : MonoBehaviour
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
-
-        // Rellena los datos del usuario
-        //Debug.Log(gameManager.timer); 
-        /*userData = new UserData();
-        userData.email = "asdfghjkl@example.com";
-        userData.game = PlayerPrefs.GetInt("PlayerPreference").ToString();
-        userData.completed = "true";
-        userData.time = gameManager.timer.ToString("F2");
-*/
-        // Convierte el objeto a JSON y envía la solicitud HTTP
-        string jsonData = JsonUtility.ToJson(userData);
-        StartCoroutine(SendUserData(jsonData));
+        StartCoroutine(SendUserData());
     }
 
-    IEnumerator SendUserData(string jsonData)
+    IEnumerator SendUserData()
     { 
-        Debug.Log(jsonData);
        WWWForm form = new WWWForm();
         form.AddField("time",gameManager.timer.ToString("F2"));
         form.AddField("completed","true");

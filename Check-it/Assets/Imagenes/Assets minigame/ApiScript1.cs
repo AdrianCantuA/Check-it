@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
-/*
+
 public class ApiScript1 : MonoBehaviour {
     public string apiUrl = "http://presno2112.pythonanywhere.com/api/results/";
 
@@ -30,4 +30,4 @@ public class ApiScript1 : MonoBehaviour {
 [System.Serializable]
 public class MessageData {
     public string message;
-}*/
+}
