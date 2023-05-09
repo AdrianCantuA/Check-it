@@ -1,0 +1,75 @@
+
+  .datos{
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    width: 80px;
+  }
+
+.imagen{
+    border-radius: 50%;
+    height: 350px;
+    width: 350px ;
+    margin: 80px 150px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+.container_card{
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  width: fit-content;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;  padding: 50px 30px 30px 40px;
+  border-radius: 20px;
+  background-color: white;
+  float: right;
+  margin: 20px 150px;
+  margin-right: 300px;
+}
+
+.container_datos{
+  display: flex;
+  justify-content: center;
+  height: 450px;
+  width: 300px;
+  padding-left: 10px;
+  padding-bottom: 50px;
+  border-radius: 20px;
+}
+
+.fondo_registrar{
+    background-image: url("https://img.freepik.com/vector-gratis/elegante-fondo-blanco-lineas-brillantes_1017-17580.jpg?w=900&t=st=1682311245~exp=1682311845~hmac=ded6c9b2a091c090cc4c46ff768791460be5b040c73183fa3f5f16978b57ad68");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 25px 25px 30px 20px;
+    height: 100vh;
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.botones{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  
+}
+
+.Titulo-reg{
+  font-family: 'Poppins', sans-serif;
+  margin-left: 40px;
+  margin-top: 45px;
+  font-size: 20px;
+}
+
+.Password_reg{
+  width: 320px;
+  margin-left: -30px;
+}
+
+.texto-bajo-reg{
+  font-size: 10px;
+  text-align: right;
+}

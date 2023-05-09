@@ -1,0 +1,39 @@
+.table-container{
+    padding: 50px;
+    text-align: center;
+}
+
+.Title-listUser{
+    margin-left: 40px;
+    margin-top: 45px;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+
+.tabla_lista_usuarios{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.fondo_lista{
+    background-image: url("https://img.freepik.com/vector-gratis/elegante-fondo-blanco-lineas-brillantes_1017-17580.jpg?w=900&t=st=1682311245~exp=1682311845~hmac=ded6c9b2a091c090cc4c46ff768791460be5b040c73183fa3f5f16978b57ad68");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 5px;
+    height: 100vh;
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.container-lista{
+    margin-top: 40px;
+    padding-bottom: 500px;
+    margin-left: 17px
+}
