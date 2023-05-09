@@ -1,0 +1,36 @@
+
+.container-cont{
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.fondo_home{
+    background-image: url("https://img.freepik.com/vector-gratis/elegante-fondo-blanco-lineas-brillantes_1017-17580.jpg?w=900&t=st=1682311245~exp=1682311845~hmac=ded6c9b2a091c090cc4c46ff768791460be5b040c73183fa3f5f16978b57ad68");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 25px 25px 30px 20px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.imagen_pr{
+    border-radius: 40px;
+    height: 550px;
+    width: fit-content;
+    align-content: center;
+    margin-left: 200px;
+    margin-bottom: 20px;
+
+}
+
+.titulo-home{
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+}
